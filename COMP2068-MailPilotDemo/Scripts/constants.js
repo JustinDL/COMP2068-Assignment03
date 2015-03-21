@@ -1,7 +1,7 @@
 var constants;
 (function (constants) {
     // font Constants
-    constants.FONT_SIZE = "40px";
+    constants.FONT_SIZE = "24px";
     constants.FONT_FAMILY = "Consolas";
     constants.FONT_COLOUR = "#FFFF00";
     // stage Constants
@@ -13,6 +13,7 @@ var constants;
     // game Constants
     constants.PLAYER_LIVES = 5;
     constants.BULLET_NUM = 3;
+    constants.WAVE = 0;
     // states Constants
     constants.MENU_STATE = 0;
     constants.PLAY_STATE = 1;

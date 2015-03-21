@@ -76,7 +76,7 @@ module states {
                     collider.isColliding = true;
                     switch (collider.name) {
                         case "coin":
-                            this.scoreboard.score += 100;
+                            this.scoreboard.score += 1;
                             break;
                         case "bullet":
                             this.scoreboard.lives--;
@@ -110,7 +110,7 @@ module states {
                 createjs.Sound.stop();
                 this.game.removeAllChildren();
                 stage.removeAllChildren();
-                finalScore = this.scoreboard.score;
+                finalScore = this.scoreboard.wave;
                 if (finalScore > highScore) {
                     highScore = finalScore;
                 }
@@ -118,7 +118,8 @@ module states {
                 stateChanged = true;
             }
 
-            if (this.scoreboard.score >= 1000) {
+            if (this.scoreboard.score >= 10) {
+                constants.WAVE++;
                 stage.removeChild(stage);
                 createjs.Sound.stop();
                 stage.removeAllChildren();

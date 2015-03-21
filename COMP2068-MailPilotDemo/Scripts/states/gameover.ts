@@ -32,10 +32,10 @@ module states {
             gameOverLabel.regY = gameOverLabel.getMeasuredHeight() * 0.5;
             this.game.addChild(gameOverLabel);
 
-            var finalScoreLabel: objects.Label = new objects.Label("FINAL SCORE: " + finalScore, constants.SCREEN_CENTER_WIDTH, 200);
+            var finalScoreLabel: objects.Label = new objects.Label("FINAL WAVE: " + finalScore, constants.SCREEN_CENTER_WIDTH, 200);
             this.game.addChild(finalScoreLabel);
 
-            var highScoreLabel: objects.Label = new objects.Label("HIGH SCORE: " + highScore, constants.SCREEN_CENTER_WIDTH, 300);
+            var highScoreLabel: objects.Label = new objects.Label("BEST WAVE: " + highScore, constants.SCREEN_CENTER_WIDTH, 300);
             this.game.addChild(highScoreLabel);
 
             this.tryAgainButton = new objects.Button("tryAgainButton", constants.SCREEN_CENTER_WIDTH, 400);
@@ -49,6 +49,8 @@ module states {
 
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
         tryAgainButtonClicked() {
+            constants.BULLET_NUM = 3;
+            constants.WAVE = 0;
             this.game.removeAllChildren();
             stage.removeChild(this.game);
             currentState = constants.PLAY_STATE;

@@ -1,6 +1,6 @@
 ﻿module constants {
     // font Constants
-    export var FONT_SIZE: string = "40px";
+    export var FONT_SIZE: string = "24px";
     export var FONT_FAMILY: string = "Consolas";
     export var FONT_COLOUR: string = "#FFFF00";
 
@@ -14,6 +14,7 @@
     // game Constants
     export var PLAYER_LIVES: number = 5;
     export var BULLET_NUM: number = 3;
+    export var WAVE: number = 0;
 
     // states Constants
     export var MENU_STATE: number = 0;

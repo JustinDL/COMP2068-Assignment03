@@ -23,9 +23,9 @@ var states;
             gameOverLabel.regX = gameOverLabel.getMeasuredWidth() * 0.5;
             gameOverLabel.regY = gameOverLabel.getMeasuredHeight() * 0.5;
             this.game.addChild(gameOverLabel);
-            var finalScoreLabel = new objects.Label("FINAL SCORE: " + finalScore, constants.SCREEN_CENTER_WIDTH, 200);
+            var finalScoreLabel = new objects.Label("FINAL WAVE: " + finalScore, constants.SCREEN_CENTER_WIDTH, 200);
             this.game.addChild(finalScoreLabel);
-            var highScoreLabel = new objects.Label("HIGH SCORE: " + highScore, constants.SCREEN_CENTER_WIDTH, 300);
+            var highScoreLabel = new objects.Label("BEST WAVE: " + highScore, constants.SCREEN_CENTER_WIDTH, 300);
             this.game.addChild(highScoreLabel);
             this.tryAgainButton = new objects.Button("tryAgainButton", constants.SCREEN_CENTER_WIDTH, 400);
             this.game.addChild(this.tryAgainButton);
@@ -34,6 +34,8 @@ var states;
         } // constructor end
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
         GameOver.prototype.tryAgainButtonClicked = function () {
+            constants.BULLET_NUM = 3;
+            constants.WAVE = 0;
             this.game.removeAllChildren();
             stage.removeChild(this.game);
             currentState = constants.PLAY_STATE;
