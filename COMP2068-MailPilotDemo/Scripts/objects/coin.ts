@@ -17,7 +17,7 @@
 
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++
         private _reset() {
-            // set the island to start at a random x value
+            // set the coin to start at a random x value
             this.x = 640;
             this.y = Math.floor(Math.random() * constants.SCREEN_HEIGHT);
         }
