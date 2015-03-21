@@ -21,7 +21,7 @@ var objects;
         }
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
         Lakitu.prototype.update = function () {
-            this.x = stage.mouseX;
+            this.y = stage.mouseY;
         };
         return Lakitu;
     })(createjs.Bitmap);
