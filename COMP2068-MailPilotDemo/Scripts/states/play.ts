@@ -117,6 +117,17 @@ module states {
                 currentState = constants.GAME_OVER_STATE;
                 stateChanged = true;
             }
+
+            if (this.scoreboard.score >= 1000) {
+                stage.removeChild(stage);
+                createjs.Sound.stop();
+                stage.removeAllChildren();
+                stage.removeAllEventListeners();
+                constants.BULLET_NUM = constants.BULLET_NUM + 1;
+                currentState = constants.PLAY_STATE;
+                changeState(currentState);
+            }
+
         } // update method end
 
 
